@@ -1,0 +1,282 @@
+:root {
+    --primary-red: #C42B2B;
+    --accent-gold: #F1C40F;
+    --bg-cream: #FFFDF5;
+    --text-dark: #2C2C2C;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-cream);
+    color: var(--text-dark);
+}
+
+h1, h2, h3, h4, .serif-font { 
+    font-family: var(--font-heading); 
+}
+
+/* ==================== NAVBAR ==================== */
+.navbar { 
+    background-color: var(--bg-cream); 
+    padding: 1rem 0; 
+    border-bottom: 2px solid var(--accent-gold); 
+}
+
+.navbar-brand { 
+    font-weight: 700; 
+    font-size: 1.1rem; 
+    line-height: 1.2; 
+    color: var(--primary-red); 
+    text-transform: uppercase; 
+}
+
+.nav-link { 
+    font-weight: 500; 
+    color: var(--primary-red) !important; 
+    margin-left: 1rem; 
+}
+
+.search-icon { 
+    color: var(--primary-red); 
+    cursor: pointer; 
+}
+
+/* ==================== PAGE HEADER ==================== */
+.page-header { 
+    text-align: center; 
+    padding: 3rem 0 1rem; 
+}
+
+.page-title { 
+    font-size: 3.5rem; 
+    color: var(--primary-red); 
+    margin-bottom: 0.5rem; 
+}
+
+.page-subtitle { 
+    font-size: 1.2rem; 
+    font-weight: 600; 
+    color: var(--text-dark); 
+}
+
+/* ==================== FILTER BUTTONS ==================== */
+.filter-container { 
+    display: flex; 
+    justify-content: center; 
+    gap: 1rem; 
+    flex-wrap: wrap; 
+    padding: 2rem 0; 
+    border-bottom: 2px solid var(--accent-gold); 
+    margin-bottom: 3rem; 
+}
+
+.filter-btn {
+    background-color: var(--primary-red);
+    color: white;
+    border: 2px solid var(--accent-gold);
+    border-radius: 30px;
+    padding: 0.5rem 2rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-size: 1rem;
+}
+
+.filter-btn:hover, 
+.filter-btn.active { 
+    background-color: var(--accent-gold); 
+    color: var(--primary-red); 
+    border-color: var(--primary-red);
+}
+
+/* ==================== CAROUSEL SECTION ==================== */
+.carousel-section { 
+    padding: 0 0 4rem; 
+    position: relative; 
+}
+
+.carousel-track {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    padding: 2rem 4rem;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.carousel-track::-webkit-scrollbar { 
+    display: none; /* Chrome/Safari */ 
+}
+
+/* ==================== RECIPE CARD STYLING ==================== */
+.recipe-card {
+    min-width: 320px;
+    max-width: 320px;
+    background: white;
+    border: 2px solid var(--accent-gold);
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top { 
+    width: 100%; 
+    height: 180px; 
+    object-fit: cover; 
+    border-radius: 12px; 
+    margin-bottom: 1rem; 
+}
+
+.card-category { 
+    font-size: 0.85rem; 
+    font-weight: 700; 
+    color: var(--primary-red); 
+    text-transform: uppercase; 
+    margin-bottom: 0.5rem; 
+    letter-spacing: 0.5px;
+}
+
+.card-title { 
+    font-family: var(--font-heading); 
+    font-size: 1.4rem; 
+    color: var(--primary-red); 
+    margin-bottom: 0.5rem; 
+    line-height: 1.2;
+}
+
+.card-desc { 
+    font-size: 0.9rem; 
+    color: #666; 
+    margin-bottom: 1.5rem; 
+    line-height: 1.5; 
+    flex-grow: 1;
+}
+
+.view-recipe { 
+    color: var(--accent-gold); 
+    font-weight: 600; 
+    text-decoration: none; 
+    display: inline-flex; 
+    align-items: center; 
+    gap: 5px; 
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.view-recipe:hover { 
+    color: var(--primary-red); 
+}
+
+/* ==================== SCROLL BUTTONS ==================== */
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    border: 2px solid var(--primary-red);
+    background: white;
+    color: var(--primary-red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s;
+}
+
+.scroll-btn:hover { 
+    background: var(--primary-red); 
+    color: white; 
+}
+
+.scroll-left { left: 1rem; }
+.scroll-right { right: 1rem; }
+
+/* ==================== PAGINATION DOTS ==================== */
+.pagination-dots { 
+    display: flex; 
+    justify-content: center; 
+    gap: 12px; 
+    margin-top: 1rem; 
+}
+
+.dot { 
+    width: 14px; 
+    height: 14px; 
+    border-radius: 50%; 
+    border: 2px solid var(--accent-gold); 
+    background: transparent; 
+}
+
+.dot.active { 
+    background: var(--accent-gold); 
+}
+
+/* ==================== FOOTER ==================== */
+footer { 
+    background-color: var(--accent-gold); 
+    padding: 2rem 0; 
+    color: var(--primary-red); 
+    margin-top: 2rem;
+}
+
+.footer-logo { 
+    font-weight: 800; 
+    font-size: 1.8rem; 
+    line-height: 1.1; 
+    text-transform: uppercase; 
+    letter-spacing: -0.5px; 
+}
+
+.footer-small { 
+    display: block; 
+    font-size: 0.9rem; 
+    margin-bottom: 2px; 
+    letter-spacing: 1px; 
+}
+
+.footer-links a { 
+    color: var(--primary-red); 
+    text-decoration: none; 
+    margin-left: 1.5rem; 
+    font-weight: 500; 
+}
+
+/* ==================== UTILITY CLASSES FOR FILTERING ==================== */
+.hide-card {
+    display: none !important;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 768px) {
+    .carousel-track { 
+        padding: 2rem 1rem; 
+    }
+    
+    .scroll-btn { 
+        display: none; /* Hide arrows on mobile, use touch scroll */ 
+    }
+    
+    .page-title { 
+        font-size: 2.5rem; 
+    }
+    
+    .filter-btn {
+        padding: 0.4rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
