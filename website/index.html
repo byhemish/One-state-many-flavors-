@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Taste of Karnataka | One State, Many Flavours</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="text-yellow">ONE STATE,</span><br>MANY FLAVOURS.
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="recipes.html">Recipes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Breakfast</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Main Dishes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Snacks</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Sweets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Drinks</a></li>
+                    <li class="nav-item ms-3 position-relative">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-search search-icon" viewBox="0 0 16 16" onclick="toggleSearch()">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                        <div class="search-overlay" id="searchOverlay">
+                            <input type="text" id="searchInput" placeholder="Search recipes..." onkeyup="filterContent()">
+                            <button class="btn-close-search" onclick="toggleSearch()">×</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="yellow-divider"></div>
+
+    <!-- Hero Section -->
+    <header class="hero-section searchable-item">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h1 class="hero-title-script">A Taste of Karnataka</h1>
+                    <h2 class="hero-subtitle-wrapper">
+                        <span class="small-red-text">ONE STATE,</span> 
+                        <span class="large-red-text">Many Flavours.</span>
+                    </h2>
+                    <p class="hero-desc">Discover the rich culinary heritage of Karnataka, one delicious dish at a time.</p>
+                    <a href="#explore" class="btn btn-explore">Explore Recipes</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="collage-container">
+                        <img src="images/hero-thali.jpg" alt="Traditional Thali" class="img-collage img-main">
+                        <img src="images/hero-Chiroti.jpg" alt="Chiroti" class="img-collage img-float-1">
+                        <img src="images/hero-sweets.jpg" alt="Sweets" class="img-collage img-float-2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="yellow-divider"></div>
+
+        <!-- Explore Flavours Section -->
+    <section id="explore" class="explore-section searchable-item">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="text-red">Explore</span> The Flavours
+            </h2>
+            
+            <div class="category-grid">
+                <a href="#" class="cat-btn">Breakfast</a>
+                <a href="#" class="cat-btn">Main Dishes</a>
+                <a href="#" class="cat-btn">Snacks</a>
+                <a href="#" class="cat-btn">Drinks</a>
+                <a href="#" class="cat-btn">Sweets</a>
+            </div>
+        </div>
+    </section>
+    <div class="yellow-divider"></div>
+
+    <!-- Tradition Section -->
+    <section class="tradition-section searchable-item">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-5 mb-lg-0">
+                    <h3 class="tradition-title text-yellow">MORE THAN FOOD.</h3>
+                    <h4 class="tradition-subtitle">A TASTE OF TRADITION</h4>
+                    <p class="tradition-text">
+                        Explore the flavours, stories, and traditions that make Karnataka’s cuisine unique. From the misty hills of Coorg to the bustling streets of Bangalore, every dish tells a story of heritage and passion.
+                    </p>
+                </div>
+                <div class="col-lg-7">
+                    <div class="row justify-content-center">
+                        <div class="col-md-5 col-6 mb-4">
+                            <div class="stamp-wrapper rotate-left">
+                                <img src="images/stamp-dosa.png" alt="Masala Dosa Stamp" class="stamp-image">
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-6 mb-4">
+                            <div class="stamp-wrapper rotate-right">
+                                <img src="images/stamp-mutton.png" alt="Mutton Fry Stamp" class="stamp-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="yellow-divider"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                    <div class="footer-logo">
+                        <span class="footer-small">ONE STATE,</span>
+                        MANY FLAVOURS.
+                    </div>
+                </div>
+                <div class="col-md-8 text-center text-md-end">
+                    <div class="footer-links mb-2">
+                        <a href="index.html">Home</a>
+                        <a href="recipes.html">Recipes</a>
+                        <a href="#">Breakfast</a>
+                        <a href="#">Main Dishes</a>
+                        <a href="#">Snacks</a>
+                        <a href="#">Sweets</a>
+                        <a href="#">Drinks</a>
+                    </div>
+                    <small class="d-block mt-2">&copy; 2026 One State, Many Flavours</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
