@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breakfast | One State, Many Flavours</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/category-style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                ONE STATE,<br>MANY FLAVOURS.
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="recipes.html">Recipes</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Breakfast</a></li>
+                    <li class="nav-item"><a class="nav-link" href="main-dishes.html">Main Dishes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="snacks.html">Snacks</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sweets.html">Sweets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="drinks.html">Drinks</a></li>
+                    
+                    <!-- Search Icon & Overlay -->
+                    <li class="nav-item ms-3 position-relative">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-search search-icon" viewBox="0 0 16 16" onclick="toggleSearch()">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                        <div class="search-overlay" id="searchOverlay">
+                            <input type="text" id="searchInput" placeholder="Search recipes..." onkeyup="filterContent()">
+                            <button class="btn-close-search" onclick="toggleSearch()">×</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="category-header searchable-item">
+        <div class="container">
+            <h1 class="category-title">Breakfast</h1>
+            <p class="category-subtitle">Start the day with the flavours of Karnataka, from soft Neer Dosa and Thatte Idli to crispy Akki Rotti and nutritious Ragi Dosa.</p>
+        </div>
+    </header>
+
+    <!-- Recipe Grid Section -->
+    <section class="recipe-grid-section">
+        <div class="container">
+            <div class="row g-4 searchable-item">
+                
+                <!-- Card 1: Neer Dosa -->
+                <div class="col-lg-6">
+                    <div class="recipe-card-horizontal">
+                        <div class="card-img-wrapper">
+                            <img src="images/breakfast/neer-dosa.jpg" alt="Neer Dosa">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title-serif">Neer Dosa</h3>
+                            <p class="card-desc">Neer Dosa is a light, unfermented rice crepe from coastal Karnataka (Mangaluru & Udupi). Made from a thin water batter, it is traditionally served with coconut chutney, vegetable saagu, or fish and chicken curries.</p>
+                            <div class="card-meta">Prep: 15 minutes Cook: 30 minutes Serves: 4</div>
+                        </div>
+                        <div class="card-footer-action">
+                            <button class="btn-view-full recipe-toggle" data-target="neer-dosa-details">View Full Recipe</button>
+                        </div>
+                        <!-- Dropdown Content -->
+                        <div id="neer-dosa-details" class="recipe-details-dropdown">
+                            <div class="details-inner">
+                                <h4>Ingredients</h4>
+                                <ul class="ingredient-list">
+                                    <li>2 cups raw rice (sona masoori or parboiled)</li>
+                                    <li>4 cups water (for soaking + grinding)</li>
+                                    <li>1 tsp salt</li>
+                                    <li>Oil or ghee (for cooking)</li>
+                                </ul>
+                                <h4>Instructions</h4>
+                                <ol class="instruction-list">
+                                    <li>Wash rice thoroughly and soak in 3 cups water for 4-6 hours.</li>
+                                    <li>Drain water and grind rice with 1 cup fresh water into a smooth, thin batter. Add salt.</li>
+                                    <li>Heat a non-stick tawa on medium heat. Pour a ladleful of batter and swirl quickly to form a thin crepe.</li>
+                                    <li>Drizzle oil/ghee around edges. Cook until bottom is lightly golden (no flipping needed).</li>
+                                    <li>Fold or roll and serve hot with coconut chutney, saagu, or curry.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Akki Rotti -->
+                <div class="col-lg-6">
+                    <div class="recipe-card-horizontal">
+                        <div class="card-img-wrapper">
+                            <img src="images/breakfast/akki-rotti.jpg" alt="Akki Rotti">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title-serif">Akki Rotti</h3>
+                            <p class="card-desc">Akki Rotti is a traditional Karnataka rice-flour flatbread mixed with vegetables and spices. Cooked until crisp on the outside and soft inside, it is commonly served for breakfast with coconut chutney, chutney powder, or vegetable curry.</p>
+                            <div class="card-meta">Prep: 15 minutes Cook: 30 minutes Serves: 4</div>
+                        </div>
+                        <div class="card-footer-action">
+                            <button class="btn-view-full recipe-toggle" data-target="akki-rotti-details">View Full Recipe</button>
+                        </div>
+                        <div id="akki-rotti-details" class="recipe-details-dropdown">
+                            <div class="details-inner">
+                                <h4>Ingredients</h4>
+                                <ul class="ingredient-list">
+                                    <li>2 cups rice flour</li>
+                                    <li>1 cup finely chopped onions</li>
+                                    <li>2 green chillies, chopped</li>
+                                    <li>2 tbsp grated coconut</li>
+                                    <li>2 tbsp chopped coriander leaves</li>
+                                    <li>1 tsp cumin seeds</li>
+                                    <li>Salt to taste</li>
+                                    <li>Water (as needed)</li>
+                                    <li>Oil (for cooking)</li>
+                                </ul>
+                                <h4>Instructions</h4>
+                                <ol class="instruction-list">
+                                    <li>Mix rice flour, onions, chillies, coconut, coriander, cumin, and salt in a bowl.</li>
+                                    <li>Gradually add water and knead into a soft dough (not sticky).</li>
+                                    <li>Take a lemon-sized ball, place on oiled plastic sheet, and flatten evenly with wet fingers.</li>
+                                    <li>Carefully invert onto a hot tawa. Peel off plastic gently.</li>
+                                    <li>Drizzle oil around edges. Cook on medium heat until golden brown on both sides.</li>
+                                    <li>Serve hot with coconut chutney or pickle.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Mysore Masala Dosa -->
+                <div class="col-lg-6">
+                    <div class="recipe-card-horizontal">
+                        <div class="card-img-wrapper">
+                            <img src="images/breakfast/mysore-masala-dosa.jpg" alt="Mysore Masala Dosa">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title-serif">Mysore Masala Dosa</h3>
+                            <p class="card-desc">Mysore Masala Dosa is a famous Karnataka breakfast featuring a crisp, golden crepe lined with signature spicy red chutney and stuffed with flavorful spiced potatoes.</p>
+                            <div class="card-meta">Prep: 30m (+ soak) | Cook: 20m | Serves: 4</div>
+                        </div>
+                        <div class="card-footer-action">
+                            <button class="btn-view-full recipe-toggle" data-target="mysore-dosa-details">View Full Recipe</button>
+                        </div>
+                        <div id="mysore-dosa-details" class="recipe-details-dropdown">
+                            <div class="details-inner">
+                                <h4>Ingredients</h4>
+                                <ul class="ingredient-list">
+                                    <li>2 cups dosa batter (rice & urad dal)</li>
+                                    <li>3 medium potatoes, boiled & mashed</li>
+                                    <li>1 onion, finely chopped</li>
+                                    <li>2 tbsp mysore red chutney paste</li>
+                                    <li>1 tsp mustard seeds</li>
+                                    <li>Curry leaves, turmeric, salt</li>
+                                    <li>Ghee or oil for roasting</li>
+                                </ul>
+                                <h4>Instructions</h4>
+                                <ol class="instruction-list">
+                                    <li>Temper mustard seeds and curry leaves in oil. Add onions and sauté until translucent.</li>
+                                    <li>Add mashed potatoes, turmeric, salt, and mix well. Let cool.</li>
+                                    <li>Spread dosa batter thinly on a hot tawa. Drizzle ghee around edges.</li>
+                                    <li>Once crisp, spread a layer of mysore red chutney on the inner side.</li>
+                                    <li>Place potato filling in the center, fold or roll, and serve immediately with sambar and chutney.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Thatte Idli -->
+                <div class="col-lg-6">
+                    <div class="recipe-card-horizontal">
+                        <div class="card-img-wrapper">
+                            <img src="images/breakfast/thatte-Idli.jpg" alt="Thatte Idli">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title-serif">Thatte Idli</h3>
+                            <p class="card-desc">Thatte Idli is a soft, oversized, plate-shaped steamed rice cake popular across Karnataka, traditionally served with coconut chutney and sambar.</p>
+                            <div class="card-meta">Prep: 30m (+ soak) | Cook: 15m | Serves: 4</div>
+                        </div>
+                        <div class="card-footer-action">
+                            <button class="btn-view-full recipe-toggle" data-target="thatte-idli-details">View Full Recipe</button>
+                        </div>
+                        <div id="thatte-idli-details" class="recipe-details-dropdown">
+                            <div class="details-inner">
+                                <h4>Ingredients</h4>
+                                <ul class="ingredient-list">
+                                    <li>3 cups idli rice</li>
+                                    <li>1 cup urad dal</li>
+                                    <li>1 tsp fenugreek seeds</li>
+                                    <li>Salt to taste</li>
+                                    <li>Water for grinding</li>
+                                </ul>
+                                <h4>Instructions</h4>
+                                <ol class="instruction-list">
+                                    <li>Soak rice and urad dal separately for 6-8 hours with fenugreek seeds in dal.</li>
+                                    <li>Grind dal to fluffy batter and rice to smooth batter. Mix together with salt.</li>
+                                    <li>Ferment overnight in a warm place until doubled in volume.</li>
+                                    <li>Pour batter onto greased thatte idli plates (flat steel plates).</li>
+                                    <li>Steam in an idli cooker or large vessel for 12-15 minutes until cooked through.</li>
+                                    <li>Serve hot with coconut chutney and sambar.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Ragi Dosa -->
+                <div class="col-lg-6">
+                    <div class="recipe-card-horizontal">
+                        <div class="card-img-wrapper">
+                            <img src="images/breakfast/ragi-dosa.jpg" alt="Ragi Dosa">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title-serif">Ragi Dosa</h3>
+                            <p class="card-desc">Ragi Dosa is a wholesome, nutrient-rich, and naturally gluten-free Karnataka breakfast made with finger millet flour (ragi), giving it a distinctive earthy flavor.</p>
+                            <div class="card-meta">Prep: 30m (+ soak) | Cook: 15m | Serves: 4</div>
+                        </div>
+                        <div class="card-footer-action">
+                            <button class="btn-view-full recipe-toggle" data-target="ragi-dosa-details">View Full Recipe</button>
+                        </div>
+                        <div id="ragi-dosa-details" class="recipe-details-dropdown">
+                            <div class="details-inner">
+                                <h4>Ingredients</h4>
+                                <ul class="ingredient-list">
+                                    <li>1 cup ragi flour (finger millet)</li>
+                                    <li>½ cup rice flour</li>
+                                    <li>2 tbsp finely chopped onions</li>
+                                    <li>1 green chilli, chopped</li>
+                                    <li>2 tbsp chopped coriander</li>
+                                    <li>1 tsp cumin seeds</li>
+                                    <li>Salt to taste</li>
+                                    <li>Water (to make thin batter)</li>
+                                    <li>Oil or ghee for cooking</li>
+                                </ul>
+                                <h4>Instructions</h4>
+                                <ol class="instruction-list">
+                                    <li>Mix ragi flour, rice flour, onions, chilli, coriander, cumin, and salt in a bowl.</li>
+                                    <li>Gradually add water while mixing to form a thin, pourable batter (no lumps).</li>
+                                    <li>Let the batter rest for 15-20 minutes.</li>
+                                    <li>Heat a tawa on medium-high. Pour batter from a height in a circular motion to create holes.</li>
+                                    <li>Drizzle oil around edges. Cook until crispy and golden brown.</li>
+                                    <li>Serve hot with coconut chutney or tomato chutney.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Promo Box -->
+                <div class="col-lg-6">
+                    <div class="promo-box-red">
+                        <h2 class="promo-title">MORE THAN A<br>MORNING MEAL</h2>
+                        <a href="main-dishes.html" class="btn-promo-outline">Main Dishes</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                    <div class="footer-logo">
+                        <span class="footer-small">ONE STATE,</span>
+                        MANY FLAVOURS.
+                    </div>
+                </div>
+                <div class="col-md-8 text-center text-md-end">
+                    <div class="footer-links mb-2">
+                        <a href="index.html">Home</a>
+                        <a href="recipes.html">Recipes</a>
+                        <a href="breakfast.html">Breakfast</a>
+                        <a href="main-dishes.html">Main Dishes</a>
+                        <a href="snacks.html">Snacks</a>
+                        <a href="sweets.html">Sweets</a>
+                        <a href="drinks.html">Drinks</a>
+                    </div>
+                    <small class="d-block mt-2">&copy; 2026 One State, Many Flavours</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/category-script.js"></script>
+</body>
+</html>
