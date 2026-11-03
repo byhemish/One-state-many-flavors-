@@ -13,6 +13,9 @@ body {
     color: var(--text-dark);
 }
 
+.text-yellow { color: var(--accent-gold) !important; }
+.text-red { color: var(--primary-red) !important; }
+
 /* ================= NAVBAR & SEARCH ================= */
 .navbar { 
     background-color: var(--bg-cream); 

@@ -17,6 +17,9 @@ h1, h2, h3, h4, .serif-font {
     font-family: var(--font-heading); 
 }
 
+.text-yellow { color: var(--accent-gold) !important; }
+.text-red { color: var(--primary-red) !important; }
+
 /* ==================== NAVBAR ==================== */
 .navbar { 
     background-color: var(--bg-cream); 
