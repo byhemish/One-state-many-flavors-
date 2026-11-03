@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drinks | One State, Many Flavours</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS (Same as other pages) -->
+    <link rel="stylesheet" href="css/category-style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="text-yellow">ONE STATE,</span><br>MANY FLAVOURS.
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="recipes.html">Recipes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="breakfast.html">Breakfast</a></li>
+                    <li class="nav-item"><a class="nav-link" href="main dishes.html">Main Dishes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="snacks.html">Snacks</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="drinks.html">Drinks</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sweets.html">Sweets</a></li>
+                    
+                    <!-- Search Icon & Overlay -->
+                    <li class="nav-item ms-3 position-relative">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-search search-icon" viewBox="0 0 16 16" onclick="toggleSearch()">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                        <div class="search-overlay" id="searchOverlay">
+                            <input type="text" id="searchInput" placeholder="Search recipes..." onkeyup="filterContent()">
+                            <button class="btn-close-search" onclick="toggleSearch()">×</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Page Header -->
+    <header class="category-header searchable-item">
+        <div class="container">
+            <h1 class="category-title">Drinks</h1>
+            <p class="category-subtitle">Refreshing drinks rooted in everyday life and celebration.</p>
+        </div>
+    </header>
+
+    <!-- Recipe Grid Section -->
+    <section class="recipe-grid-section">
+        <div class="container">
+            <div class="row g-4 searchable-item">
+                
+                <!-- Card 1: Majjige -->
+                <div class="col-lg-6">
+                    <div class="recipe-card-horizontal">
+                        <div class="card-img-wrapper">
+                            <img src="images/drinks/Majjige.jpg" alt="Majjige">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title-serif">Majjige</h3>
+                            <p class="card-desc">Majjige is a light, cooling Karnataka spiced buttermilk flavored with fresh ginger, green chillies, and curry leaves—perfect for warm days or after meals.</p>
+                            <div class="card-meta">Prep: 10 minutes Cook: 2 minutes Serves: 3</div>
+                        </div>
+                        <div class="card-footer-action">
+                            <button class="btn-view-full recipe-toggle" data-target="majjige-details">View Full Recipe</button>
+                        </div>
+                        <!-- Dropdown Content -->
+                        <div id="majjige-details" class="recipe-details-dropdown">
+                            <div class="details-inner">
+                                <h4>Ingredients</h4>
+                                <ul class="ingredient-list">
+                                    <li>2 cups thick yogurt (curd)</li>
+                                    <li>4 cups cold water</li>
+                                    <li>1 inch ginger, crushed</li>
+                                    <li>2 green chillies, slit</li>
+                                    <li>10-12 curry leaves</li>
+                                    <li>½ tsp mustard seeds</li>
+                                    <li>Pinch of asafoetida</li>
+                                    <li>Salt to taste</li>
+                                    <li>1 tsp oil (for tempering)</li>
+                                </ul>
+                                <h4>Instructions</h4>
+                                <ol class="instruction-list">
+                                    <li>Whisk yogurt with cold water until smooth and frothy.</li>
+                                    <li>Add crushed ginger, green chillies, curry leaves, and salt. Mix well.</li>
+                                    <li>Heat oil in a small pan. Add mustard seeds and let them splutter.</li>
+                                    <li>Add asafoetida and remaining curry leaves. Fry for 10 seconds.</li>
+                                    <li>Pour tempering over the buttermilk mixture. Stir gently.</li>
+                                    <li>Serve immediately chilled. Garnish with fresh coriander if desired.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Ragi Ambli -->
+                <div class="col-lg-6">
+                    <div class="recipe-card-horizontal">
+                        <div class="card-img-wrapper">
+                            <img src="images/drinks/Ragi Ambli.jpg" alt="Ragi Ambli">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title-serif">Ragi Ambli</h3>
+                            <p class="card-desc">Ragi Ambli is a traditional, cooling Karnataka drink made from nutrient-rich finger millet (ragi), loved as a light and refreshing rural staple for warm days.</p>
+                            <div class="card-meta">Prep: 10m Cook: 7m Cool: 30–40m Serves: 3</div>
+                        </div>
+                        <div class="card-footer-action">
+                            <button class="btn-view-full recipe-toggle" data-target="ragi-ambli-details">View Full Recipe</button>
+                        </div>
+                        <div id="ragi-ambli-details" class="recipe-details-dropdown">
+                            <div class="details-inner">
+                                <h4>Ingredients</h4>
+                                <ul class="ingredient-list">
+                                    <li>½ cup ragi flour (finger millet)</li>
+                                    <li>3 cups water</li>
+                                    <li>1 small onion, finely chopped</li>
+                                    <li>2 green chillies, chopped</li>
+                                    <li>2 tbsp chopped coriander</li>
+                                    <li>1 tsp cumin powder</li>
+                                    <li>½ tsp chaat masala</li>
+                                    <li>Salt to taste</li>
+                                    <li>Lemon juice (optional)</li>
+                                </ul>
+                                <h4>Instructions</h4>
+                                <ol class="instruction-list">
+                                    <li>Mix ragi flour with 1 cup cold water to make a smooth slurry (no lumps).</li>
+                                    <li>Boil remaining 2 cups water. Pour slurry into boiling water while stirring continuously.</li>
+                                    <li>Cook on low heat for 5-7 minutes until it thickens slightly. Let it cool completely.</li>
+                                    <li>Add chopped onion, green chillies, coriander, cumin powder, chaat masala, and salt.</li>
+                                    <li>Add enough cold water to reach desired consistency. Mix well.</li>
+                                    <li>Add lemon juice if desired. Serve chilled.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Filter Coffee -->
+                <div class="col-lg-6">
+                    <div class="recipe-card-horizontal">
+                        <div class="card-img-wrapper">
+                            <img src="images/drinks/Filter Coffee.jpg" alt="Filter Coffee">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title-serif">Filter Coffee</h3>
+                            <p class="card-desc">Filter Coffee is an iconic South Indian staple brewed slowly through a metal filter and mixed with hot milk and sugar, traditionally served in a classic steel tumbler and davara.</p>
+                            <div class="card-meta">Prep: 2m Cook: 5m Brew: 10–15m Serves: 3</div>
+                        </div>
+                        <div class="card-footer-action">
+                            <button class="btn-view-full recipe-toggle" data-target="filter-coffee-details">View Full Recipe</button>
+                        </div>
+                        <div id="filter-coffee-details" class="recipe-details-dropdown">
+                            <div class="details-inner">
+                                <h4>Ingredients</h4>
+                                <ul class="ingredient-list">
+                                    <li>3 tbsp South Indian filter coffee powder</li>
+                                    <li>1½ cups water (boiling)</li>
+                                    <li>1½ cups full-fat milk</li>
+                                    <li>3-4 tbsp sugar (adjust to taste)</li>
+                                </ul>
+                                <h4>Instructions</h4>
+                                <ol class="instruction-list">
+                                    <li>Add coffee powder to the top compartment of the filter. Press down gently with the perforated disc.</li>
+                                    <li>Pour boiling water over the coffee. Cover and let it brew for 10-15 minutes.</li>
+                                    <li>Meanwhile, boil milk in a separate vessel. Add sugar and stir until dissolved.</li>
+                                    <li>Once brewing is complete, you'll have strong decoction in the bottom compartment.</li>
+                                    <li>Mix ¼ cup decoction with ½ cup hot milk per serving. Adjust ratio to taste.</li>
+                                    <li>Pour back and forth between tumbler and davara 3-4 times to create froth. Serve hot.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Kashaya -->
+                <div class="col-lg-6">
+                    <div class="recipe-card-horizontal">
+                        <div class="card-img-wrapper">
+                            <img src="images/drinks/Kashaya.jpg" alt="Kashaya">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title-serif">Kashaya</h3>
+                            <p class="card-desc">Kashaya is a warm, caffeine-free Karnataka herbal brew made by simmering roasted coriander, cumin, pepper, and dry ginger in water for a soothing, aromatic drink.</p>
+                            <div class="card-meta">Prep: 5 minutes Cook: 10 minutes Serves: 3</div>
+                        </div>
+                        <div class="card-footer-action">
+                            <button class="btn-view-full recipe-toggle" data-target="kashaya-details">View Full Recipe</button>
+                        </div>
+                        <div id="kashaya-details" class="recipe-details-dropdown">
+                            <div class="details-inner">
+                                <h4>Ingredients</h4>
+                                <ul class="ingredient-list">
+                                    <li>2 tbsp coriander seeds</li>
+                                    <li>1 tsp cumin seeds</li>
+                                    <li>½ tsp black peppercorns</li>
+                                    <li>1 inch dry ginger (sonth)</li>
+                                    <li>4 cups water</li>
+                                    <li>Jaggery or honey (to taste)</li>
+                                    <li>Few tulsi leaves (optional)</li>
+                                </ul>
+                                <h4>Instructions</h4>
+                                <ol class="instruction-list">
+                                    <li>Dry roast coriander seeds, cumin seeds, peppercorns, and dry ginger on low heat for 2-3 minutes until fragrant.</li>
+                                    <li>Crush the roasted spices lightly using a mortar and pestle.</li>
+                                    <li>Bring water to a boil in a vessel. Add crushed spices and tulsi leaves.</li>
+                                    <li>Simmer on low heat for 8-10 minutes until the water reduces by about one-third.</li>
+                                    <li>Strain into cups. Add jaggery or honey while still warm. Stir until dissolved.</li>
+                                    <li>Serve warm. Best consumed during monsoon or winter.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Panaka -->
+                <div class="col-lg-6">
+                    <div class="recipe-card-horizontal">
+                        <div class="card-img-wrapper">
+                            <img src="images/drinks/Panaka.jpg" alt="Panaka">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title-serif">Panaka</h3>
+                            <p class="card-desc">Panaka is a traditional, cooling South Indian festive drink made with jaggery, lemon, fresh ginger, and fragrant cardamom, celebrated as a classic symbol of hospitality.</p>
+                            <div class="card-meta">Prep: 10m Chill: 15–20m Serves: 4</div>
+                        </div>
+                        <div class="card-footer-action">
+                            <button class="btn-view-full recipe-toggle" data-target="panaka-details">View Full Recipe</button>
+                        </div>
+                        <div id="panaka-details" class="recipe-details-dropdown">
+                            <div class="details-inner">
+                                <h4>Ingredients</h4>
+                                <ul class="ingredient-list">
+                                    <li>½ cup jaggery, grated</li>
+                                    <li>4 cups water</li>
+                                    <li>2 tbsp lemon juice</li>
+                                    <li>1 inch ginger, grated</li>
+                                    <li>4-5 green cardamom pods, crushed</li>
+                                    <li>Pinch of edible camphor (pachha karpooram) - optional</li>
+                                    <li>Few mint leaves</li>
+                                    <li>Ice cubes</li>
+                                </ul>
+                                <h4>Instructions</h4>
+                                <ol class="instruction-list">
+                                    <li>Dissolve jaggery in 1 cup warm water. Strain to remove impurities.</li>
+                                    <li>Add remaining cold water, lemon juice, grated ginger, and crushed cardamom.</li>
+                                    <li>Add a tiny pinch of edible camphor if using. Mix well.</li>
+                                    <li>Add mint leaves and stir gently.</li>
+                                    <li>Refrigerate for 15-20 minutes until well chilled.</li>
+                                    <li>Serve in traditional brass or copper tumblers with ice cubes. Garnish with mint.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Promo Box -->
+                <div class="col-lg-6">
+                    <div class="promo-box-red">
+                        <h2 class="promo-title">END WITH<br>SOMETHING SWEET</h2>
+                        <a href="sweets.html" class="btn-promo-outline">Karnataka's Sweets</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                    <div class="footer-logo">
+                        <span class="footer-small">ONE STATE,</span>
+                        MANY FLAVOURS.
+                    </div>
+                </div>
+                <div class="col-md-8 text-center text-md-end">
+                    <div class="footer-links mb-2">
+                        <a href="index.html">Home</a>
+                        <a href="recipes.html">Recipes</a>
+                        <a href="breakfast.html">Breakfast</a>
+                        <a href="main-dishes.html">Main Dishes</a>
+                        <a href="snacks.html">Snacks</a>
+                        <a href="sweets.html">Sweets</a>
+                        <a href="#">Drinks</a>
+                    </div>
+                    <small class="d-block mt-2">&copy; 2026 One State, Many Flavours</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Same JS file as other category pages -->
+    <script src="js/category-script.js"></script>
+</body>
+</html>
