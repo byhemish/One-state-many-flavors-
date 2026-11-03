@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweets | One State, Many Flavours</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS (Same as other pages) -->
+    <link rel="stylesheet" href="css/category-style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="text-yellow">ONE STATE,</span><br>MANY FLAVOURS.
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="recipes.html">Recipes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="breakfast.html">Breakfast</a></li>
+                    <li class="nav-item"><a class="nav-link" href="main dishes.html">Main Dishes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="snacks.html">Snacks</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="drinks.html">Drinks</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sweets.html">Sweets</a></li>
+                    
+                    
+                    <!-- Search Icon & Overlay -->
+                    <li class="nav-item ms-3 position-relative">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-search search-icon" viewBox="0 0 16 16" onclick="toggleSearch()">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                        <div class="search-overlay" id="searchOverlay">
+                            <input type="text" id="searchInput" placeholder="Search recipes..." onkeyup="filterContent()">
+                            <button class="btn-close-search" onclick="toggleSearch()">×</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Page Header -->
+    <header class="category-header searchable-item">
+        <div class="container">
+            <h1 class="category-title">Sweets</h1>
+            <p class="category-subtitle">There's always another flavour to discover.</p>
+        </div>
+    </header>
+
+    <!-- Recipe Grid Section -->
+    <section class="recipe-grid-section">
+        <div class="container">
+            <div class="row g-4 searchable-item">
+                
+                <!-- Card 1: Mysore Pak -->
+                <div class="col-lg-6">
+                    <div class="recipe-card-horizontal">
+                        <div class="card-img-wrapper">
+                            <img src="images/sweets/Mysore Pak.jpg" alt="Mysore Pak">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title-serif">Mysore Pak</h3>
+                            <p class="card-desc">Mysore Pak is a world-famous Karnataka sweet crafted from gram flour, ghee, and sugar, originating from the royal kitchens of Mysore Palace with a rich, melt-in-the-mouth texture.</p>
+                            <div class="card-meta">Prep: 10 minutes Cook: 25 minutes Serves: 10</div>
+                        </div>
+                        <div class="card-footer-action">
+                            <button class="btn-view-full recipe-toggle" data-target="mysore-pak-details">View Full Recipe</button>
+                        </div>
+                        <!-- Dropdown Content -->
+                        <div id="mysore-pak-details" class="recipe-details-dropdown">
+                            <div class="details-inner">
+                                <h4>Ingredients</h4>
+                                <ul class="ingredient-list">
+                                    <li>1 cup besan (gram flour)</li>
+                                    <li>2 cups sugar</li>
+                                    <li>¾ cup water</li>
+                                    <li>1½ cups ghee (clarified butter)</li>
+                                    <li>¼ tsp cardamom powder</li>
+                                </ul>
+                                <h4>Instructions</h4>
+                                <ol class="instruction-list">
+                                    <li>Dry roast besan on low heat for 2-3 minutes until fragrant. Do not brown.</li>
+                                    <li>Boil sugar and water to make syrup. Cook until it reaches one-string consistency.</li>
+                                    <li>Add roasted besan to syrup while stirring continuously to avoid lumps.</li>
+                                    <li>Add ghee in small increments, stirring constantly. The mixture will start leaving sides of pan.</li>
+                                    <li>Once it forms a porous, spongy mass, quickly transfer to a greased plate.</li>
+                                    <li>Let it cool completely before cutting into squares or diamonds. Store in airtight container.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Dharwad Peda -->
+                <div class="col-lg-6">
+                    <div class="recipe-card-horizontal">
+                        <div class="card-img-wrapper">
+                            <img src="images/sweets/Dharwad Peda.jpg" alt="Dharwad Peda">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title-serif">Dharwad Peda</h3>
+                            <p class="card-desc">Dharwad Peda is an iconic Karnataka sweet made by slowly caramelizing thickened milk and sugar, renowned for its rich, deep caramel flavor and signature grainy texture.</p>
+                            <div class="card-meta">Prep: 10 minutes Cook: 55 minutes Serves: 15</div>
+                        </div>
+                        <div class="card-footer-action">
+                            <button class="btn-view-full recipe-toggle" data-target="dharwad-peda-details">View Full Recipe</button>
+                        </div>
+                        <div id="dharwad-peda-details" class="recipe-details-dropdown">
+                            <div class="details-inner">
+                                <h4>Ingredients</h4>
+                                <ul class="ingredient-list">
+                                    <li>1 liter full-fat milk</li>
+                                    <li>1 cup sugar</li>
+                                    <li>½ tsp cardamom powder</li>
+                                    <li>2 tbsp khoya (mawa), crumbled</li>
+                                    <li>1 tsp ghee (for greasing)</li>
+                                </ul>
+                                <h4>Instructions</h4>
+                                <ol class="instruction-list">
+                                    <li>Boil milk in a heavy-bottomed vessel. Reduce heat and simmer, stirring frequently to prevent burning.</li>
+                                    <li>Cook until milk reduces to about one-third its original volume and turns light brown (about 45 mins).</li>
+                                    <li>Add sugar and continue cooking on low heat, stirring constantly.</li>
+                                    <li>When mixture thickens and leaves sides of pan, add cardamom powder and crumbled khoya.</li>
+                                    <li>Cook for another 5 minutes until it forms a soft dough-like consistency.</li>
+                                    <li>Cool slightly. Grease hands with ghee and shape into small flat discs. Let them set completely.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Obbattu -->
+                <div class="col-lg-6">
+                    <div class="recipe-card-horizontal">
+                        <div class="card-img-wrapper">
+                            <img src="images/sweets/Obbattu (Holige).jpg" alt="Obbattu">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title-serif">Obbattu</h3>
+                            <p class="card-desc">Obbattu (Holige) is an iconic Karnataka sweet flatbread stuffed with cooked lentils and jaggery, cooked until golden on a hot griddle, and traditionally served warm with melted ghee.</p>
+                            <div class="card-meta">Prep: 30m (+30m rest) | Cook: 35m | Serves: 8</div>
+                        </div>
+                        <div class="card-footer-action">
+                            <button class="btn-view-full recipe-toggle" data-target="obbattu-details">View Full Recipe</button>
+                        </div>
+                        <div id="obbattu-details" class="recipe-details-dropdown">
+                            <div class="details-inner">
+                                <h4>Ingredients</h4>
+                                <ul class="ingredient-list">
+                                    <li>For Dough: 2 cups all-purpose flour, ½ cup whole wheat flour, 2 tbsp oil, salt, water</li>
+                                    <li>For Filling: 1 cup chana dal, 1 cup jaggery (grated), ½ tsp cardamom powder, 1 tbsp ghee</li>
+                                    <li>Extra ghee for cooking</li>
+                                </ul>
+                                <h4>Instructions</h4>
+                                <ol class="instruction-list">
+                                    <li>Pressure cook chana dal until very soft. Drain excess water and mash coarsely.</li>
+                                    <li>Cook mashed dal with jaggery on low heat until moisture evaporates and it becomes thick. Add cardamom powder and ghee. Cool completely.</li>
+                                    <li>Knead dough with flour, oil, salt, and water until soft and pliable. Rest for 30 minutes.</li>
+                                    <li>Divide dough and filling into equal portions. Roll out dough, place filling in center, seal edges, and roll gently into thin circles.</li>
+                                    <li>Cook on hot tawa with generous ghee on both sides until golden brown spots appear.</li>
+                                    <li>Serve warm with extra ghee drizzled on top.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Chiroti -->
+                <div class="col-lg-6">
+                    <div class="recipe-card-horizontal">
+                        <div class="card-img-wrapper">
+                            <img src="images/sweets/Chiroti.jpg" alt="Chiroti">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title-serif">Chiroti</h3>
+                            <p class="card-desc">Chiroti is a delicate, layered Karnataka pastry fried until golden and flaky, served topped with powdered sugar or soaked in warm, saffron-cardamom milk.</p>
+                            <div class="card-meta">Prep: 30m (+30m rest) | Cook: 20–25m | Serves: 8</div>
+                        </div>
+                        <div class="card-footer-action">
+                            <button class="btn-view-full recipe-toggle" data-target="chiroti-details">View Full Recipe</button>
+                        </div>
+                        <div id="chiroti-details" class="recipe-details-dropdown">
+                            <div class="details-inner">
+                                <h4>Ingredients</h4>
+                                <ul class="ingredient-list">
+                                    <li>2 cups all-purpose flour</li>
+                                    <li>½ cup rice flour</li>
+                                    <li>3 tbsp ghee (melted)</li>
+                                    <li>Pinch of salt</li>
+                                    <li>Water (as needed)</li>
+                                    <li>Oil for deep frying</li>
+                                    <li>For Serving: Powdered sugar OR warm milk infused with saffron & cardamom</li>
+                                </ul>
+                                <h4>Instructions</h4>
+                                <ol class="instruction-list">
+                                    <li>Mix flours, salt, and melted ghee. Add water gradually to form a stiff dough. Rest for 30 minutes.</li>
+                                    <li>Divide dough into small balls. Roll each ball extremely thin (almost translucent) using rice flour to prevent sticking.</li>
+                                    <li>Fold the rolled sheet like an accordion or fan. Roll again gently into a small circle.</li>
+                                    <li>Heat oil on medium-low heat. Fry chirotis one by one until they puff up and turn golden crisp.</li>
+                                    <li>Drain on paper towels. They will become flaky as they cool.</li>
+                                    <li>Serve dusted with powdered sugar OR soak in warm saffron-cardamom milk for 5 minutes before serving.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Kesari Bath -->
+                <div class="col-lg-6">
+                    <div class="recipe-card-horizontal">
+                        <div class="card-img-wrapper">
+                            <img src="images/sweets/Kesari Bath.jpg" alt="Kesari Bath">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title-serif">Kesari Bath</h3>
+                            <p class="card-desc">Kesari Bath is a vibrant, aromatic Karnataka sweet made from roasted semolina, ghee, and cardamom, famously paired with savory khara bath to form the iconic chow chow bath.</p>
+                            <div class="card-meta">Prep: 30m (+30m rest) Cook: 20–25m Serves: 8</div>
+                        </div>
+                        <div class="card-footer-action">
+                            <button class="btn-view-full recipe-toggle" data-target="kesari-bath-details">View Full Recipe</button>
+                        </div>
+                        <div id="kesari-bath-details" class="recipe-details-dropdown">
+                            <div class="details-inner">
+                                <h4>Ingredients</h4>
+                                <ul class="ingredient-list">
+                                    <li>1 cup fine rava (semolina)</li>
+                                    <li>2½ cups water</li>
+                                    <li>¾ cup sugar</li>
+                                    <li>½ cup ghee</li>
+                                    <li>½ tsp cardamom powder</li>
+                                    <li>Pinch of orange food color (optional)</li>
+                                    <li>2 tbsp cashews, chopped</li>
+                                    <li>1 tbsp raisins</li>
+                                </ul>
+                                <h4>Instructions</h4>
+                                <ol class="instruction-list">
+                                    <li>Dry roast rava on low heat until fragrant and lightly golden. Set aside.</li>
+                                    <li>Boil water with sugar, food color, and half the ghee. Once boiling, add roasted rava slowly while stirring continuously to avoid lumps.</li>
+                                    <li>Cover and cook on low heat for 5-7 minutes until rava absorbs all water and becomes soft.</li>
+                                    <li>Add remaining ghee, cardamom powder, cashews, and raisins. Mix well.</li>
+                                    <li>Cook for another 2-3 minutes until ghee starts separating from sides.</li>
+                                    <li>Serve warm. Traditionally paired with Khara Bath (savory semolina) as Chow Chow Bath.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                    <div class="footer-logo">
+                        <span class="footer-small">ONE STATE,</span>
+                        MANY FLAVOURS.
+                    </div>
+                </div>
+                <div class="col-md-8 text-center text-md-end">
+                    <div class="footer-links mb-2">
+                        <a href="index.html">Home</a>
+                        <a href="recipes.html">Recipes</a>
+                        <a href="breakfast.html">Breakfast</a>
+                        <a href="main-dishes.html">Main Dishes</a>
+                        <a href="snacks.html">Snacks</a>
+                        <a href="#">Sweets</a>
+                        <a href="drinks.html">Drinks</a>
+                    </div>
+                    <small class="d-block mt-2">&copy; 2026 One State, Many Flavours</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Same JS file as other category pages -->
+    <script src="js/category-script.js"></script>
+</body>
+</html>
