@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snacks | One State, Many Flavours</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS (Same as other pages) -->
+    <link rel="stylesheet" href="css/category-style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                ONE STATE,<br>MANY FLAVOURS.
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="recipes.html">Recipes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="breakfast.html">Breakfast</a></li>
+                    <li class="nav-item"><a class="nav-link" href="main dishes.html">Main Dishes</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Snacks</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sweets.html">Sweets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="drinks.html">Drinks</a></li>
+                    
+                    <!-- Search Icon & Overlay -->
+                    <li class="nav-item ms-3 position-relative">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-search search-icon" viewBox="0 0 16 16" onclick="toggleSearch()">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                        <div class="search-overlay" id="searchOverlay">
+                            <input type="text" id="searchInput" placeholder="Search recipes..." onkeyup="filterContent()">
+                            <button class="btn-close-search" onclick="toggleSearch()">×</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="category-header searchable-item">
+        <div class="container">
+            <h1 class="category-title">Snacks</h1>
+            <p class="category-subtitle">Karnataka's snacks bring together simple ingredients, bold spices, and generations of home-style cooking.</p>
+        </div>
+    </header>
+
+    <!-- Recipe Grid Section -->
+    <section class="recipe-grid-section">
+        <div class="container">
+            <div class="row g-4 searchable-item">
+                
+                <!-- Card 1: Maddur Vada -->
+                <div class="col-lg-6">
+                    <div class="recipe-card-horizontal">
+                        <div class="card-img-wrapper">
+                            <img src="images/snacks/Maddur Vada.jpg" alt="Maddur Vada">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title-serif">Maddur Vada</h3>
+                            <p class="card-desc">Mangalorean Fish Curry is a beloved coastal Karnataka specialty featuring fresh fish simmered in a bold, tangy gravy made with coconut, red chillies, and tamarind, best enjoyed with steamed rice.</p>
+                            <div class="card-meta">Prep: 15 minutes Cook: 20 minutes Serves: 4</div>
+                        </div>
+                        <div class="card-footer-action">
+                            <button class="btn-view-full recipe-toggle" data-target="maddur-vada-details">View Full Recipe</button>
+                        </div>
+                        <!-- Dropdown Content -->
+                        <div id="maddur-vada-details" class="recipe-details-dropdown">
+                            <div class="details-inner">
+                                <h4>Ingredients</h4>
+                                <ul class="ingredient-list">
+                                    <li>1 cup rice flour</li>
+                                    <li>½ cup maida (all-purpose flour)</li>
+                                    <li>1 large onion, finely chopped</li>
+                                    <li>2 green chillies, chopped</li>
+                                    <li>2 tbsp chopped coriander</li>
+                                    <li>1 tsp cumin seeds</li>
+                                    <li>Curry leaves, salt</li>
+                                    <li>Oil for deep frying</li>
+                                </ul>
+                                <h4>Instructions</h4>
+                                <ol class="instruction-list">
+                                    <li>Mix rice flour, maida, onions, chillies, coriander, cumin, curry leaves, and salt.</li>
+                                    <li>Add hot water gradually and mix to form a stiff dough (not soft).</li>
+                                    <li>Take small portions and flatten into thick discs with oiled hands.</li>
+                                    <li>Heat oil for deep frying on medium heat.</li>
+                                    <li>Fry vadas until golden brown and crispy on both sides.</li>
+                                    <li>Drain on paper towels. Serve hot with coconut chutney.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Kodubale -->
+                <div class="col-lg-6">
+                    <div class="recipe-card-horizontal">
+                        <div class="card-img-wrapper">
+                            <img src="images/snacks/Kodubale.jpg" alt="Kodubale">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title-serif">Kodubale</h3>
+                            <p class="card-desc">Kodubale is a crunchy, ring-shaped Karnataka snack made from rice flour, roasted gram, and coconut, celebrated for its satisfying crunch and savory spice blend.</p>
+                            <div class="card-meta">Prep: 20 minutes Cook: 20 minutes Serves: 4</div>
+                        </div>
+                        <div class="card-footer-action">
+                            <button class="btn-view-full recipe-toggle" data-target="kodubale-details">View Full Recipe</button>
+                        </div>
+                        <div id="kodubale-details" class="recipe-details-dropdown">
+                            <div class="details-inner">
+                                <h4>Ingredients</h4>
+                                <ul class="ingredient-list">
+                                    <li>1 cup rice flour</li>
+                                    <li>¼ cup roasted gram flour (putnalu pindi)</li>
+                                    <li>2 tbsp grated coconut</li>
+                                    <li>1 tsp sesame seeds</li>
+                                    <li>½ tsp asafoetida</li>
+                                    <li>1 tsp chilli powder</li>
+                                    <li>Salt to taste</li>
+                                    <li>2 tbsp butter or ghee</li>
+                                    <li>Oil for deep frying</li>
+                                </ul>
+                                <h4>Instructions</h4>
+                                <ol class="instruction-list">
+                                    <li>Mix rice flour, roasted gram flour, coconut, sesame, asafoetida, chilli powder, and salt.</li>
+                                    <li>Add melted butter/ghee and rub into flour mixture.</li>
+                                    <li>Add water gradually to form a firm dough.</li>
+                                    <li>Take small portions and roll into thin ropes. Shape into rings by joining ends.</li>
+                                    <li>Heat oil on medium-low heat. Fry kodubales until golden and crisp.</li>
+                                    <li>Cool completely before storing in an airtight container.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Mangalore Buns -->
+                <div class="col-lg-6">
+                    <div class="recipe-card-horizontal">
+                        <div class="card-img-wrapper">
+                            <img src="images/snacks/Mangalore Buns.jpg" alt="Mangalore Buns">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title-serif">Mangalore Buns</h3>
+                            <p class="card-desc">Mangalore Buns are soft, fluffy, and slightly sweet fried bread rolls from coastal Karnataka made with ripe bananas, flour, and yogurt, traditionally paired with coconut chutney.</p>
+                            <div class="card-meta">Prep: 20 minutes Cook: 20 minutes Serves: 4</div>
+                        </div>
+                        <div class="card-footer-action">
+                            <button class="btn-view-full recipe-toggle" data-target="mangalore-buns-details">View Full Recipe</button>
+                        </div>
+                        <div id="mangalore-buns-details" class="recipe-details-dropdown">
+                            <div class="details-inner">
+                                <h4>Ingredients</h4>
+                                <ul class="ingredient-list">
+                                    <li>2 very ripe bananas, mashed</li>
+                                    <li>2 cups all-purpose flour</li>
+                                    <li>½ cup yogurt</li>
+                                    <li>2 tbsp sugar</li>
+                                    <li>½ tsp baking soda</li>
+                                    <li>Pinch of salt</li>
+                                    <li>Oil for deep frying</li>
+                                </ul>
+                                <h4>Instructions</h4>
+                                <ol class="instruction-list">
+                                    <li>Mash bananas thoroughly. Add yogurt, sugar, salt, and baking soda. Mix well.</li>
+                                    <li>Add flour gradually and knead into a soft, sticky dough.</li>
+                                    <li>Cover and rest for 4-6 hours (or overnight) until doubled.</li>
+                                    <li>Pinch small portions and gently flatten into thick discs (do not roll thin).</li>
+                                    <li>Fry on medium-low heat until puffed and golden brown on both sides.</li>
+                                    <li>Serve warm with coconut chutney or banana jam.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Nippattu -->
+                <div class="col-lg-6">
+                    <div class="recipe-card-horizontal">
+                        <div class="card-img-wrapper">
+                            <img src="images/snacks/Nippattu.jpg" alt="Nippattu">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title-serif">Nippattu</h3>
+                            <p class="card-desc">Nippattu is a traditional, thin, and crunchy disc-shaped Karnataka snack made from rice flour, roasted gram, peanuts, and coconut, spiced with chillies and curry leaves.</p>
+                            <div class="card-meta">Prep: 20 minutes Cook: 30 minutes Serves: 4</div>
+                        </div>
+                        <div class="card-footer-action">
+                            <button class="btn-view-full recipe-toggle" data-target="nippattu-details">View Full Recipe</button>
+                        </div>
+                        <div id="nippattu-details" class="recipe-details-dropdown">
+                            <div class="details-inner">
+                                <h4>Ingredients</h4>
+                                <ul class="ingredient-list">
+                                    <li>1 cup rice flour</li>
+                                    <li>¼ cup roasted gram flour</li>
+                                    <li>2 tbsp roasted peanuts, crushed</li>
+                                    <li>2 tbsp grated coconut</li>
+                                    <li>1 tsp sesame seeds</li>
+                                    <li>½ tsp asafoetida</li>
+                                    <li>1 tsp chilli powder</li>
+                                    <li>Curry leaves, salt</li>
+                                    <li>2 tbsp butter</li>
+                                    <li>Oil for deep frying</li>
+                                </ul>
+                                <h4>Instructions</h4>
+                                <ol class="instruction-list">
+                                    <li>Mix rice flour, roasted gram flour, peanuts, coconut, sesame, asafoetida, chilli powder, curry leaves, and salt.</li>
+                                    <li>Add melted butter and rub into mixture.</li>
+                                    <li>Add water gradually to form a firm dough.</li>
+                                    <li>Roll out thinly on a floured surface. Cut into circles or diamond shapes.</li>
+                                    <li>Fry on medium heat until crisp and lightly golden.</li>
+                                    <li>Cool completely. Store in airtight container for up to 2 weeks.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Chakli -->
+                <div class="col-lg-6">
+                    <div class="recipe-card-horizontal">
+                        <div class="card-img-wrapper">
+                            <img src="images/snacks/Chakli.jpg" alt="Chakli">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title-serif">Chakli</h3>
+                            <p class="card-desc">Chakli is a classic, spiral-shaped South Indian snack popular in Karnataka during festivals, crafted from a crunchy, golden-fried blend of rice flour, lentils, and spices.</p>
+                            <div class="card-meta">Prep: 20 minutes Cook: 25 minutes Serves: 4</div>
+                        </div>
+                        <div class="card-footer-action">
+                            <button class="btn-view-full recipe-toggle" data-target="chakli-details">View Full Recipe</button>
+                        </div>
+                        <div id="chakli-details" class="recipe-details-dropdown">
+                            <div class="details-inner">
+                                <h4>Ingredients</h4>
+                                <ul class="ingredient-list">
+                                    <li>1 cup rice flour</li>
+                                    <li>½ cup urad dal flour</li>
+                                    <li>2 tbsp roasted gram flour</li>
+                                    <li>1 tsp cumin seeds</li>
+                                    <li>½ tsp asafoetida</li>
+                                    <li>1 tsp chilli powder</li>
+                                    <li>2 tbsp butter</li>
+                                    <li>Salt to taste</li>
+                                    <li>Oil for deep frying</li>
+                                </ul>
+                                <h4>Instructions</h4>
+                                <ol class="instruction-list">
+                                    <li>Mix rice flour, urad dal flour, roasted gram flour, cumin, asafoetida, chilli powder, and salt.</li>
+                                    <li>Add melted butter and rub into flour mixture.</li>
+                                    <li>Add water gradually to form a smooth, pliable dough.</li>
+                                    <li>Fill chakli press/mold with dough. Press onto parchment paper in spiral shape.</li>
+                                    <li>Carefully slide into hot oil. Fry on medium heat until golden and crisp.</li>
+                                    <li>Drain and cool. Store in airtight container.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Promo Box -->
+                <div class="col-lg-6">
+                    <div class="promo-box-red">
+                        <h2 class="promo-title">CRISPY BITES TO<br>REFRESHING SIPS</h2>
+                        <a href="drinks.html" class="btn-promo-outline">Traditional Drinks</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                    <div class="footer-logo">
+                        <span class="footer-small">ONE STATE,</span>
+                        MANY FLAVOURS.
+                    </div>
+                </div>
+                <div class="col-md-8 text-center text-md-end">
+                    <div class="footer-links mb-2">
+                        <a href="index.html">Home</a>
+                        <a href="recipes.html">Recipes</a>
+                        <a href="breakfast.html">Breakfast</a>
+                        <a href="main dishes.html">Main Dishes</a>
+                        <a href="#">Snacks</a>
+                        <a href="sweets.html">Sweets</a>
+                        <a href="drinks.html">Drinks</a>
+                    </div>
+                    <small class="d-block mt-2">&copy; 2026 One State, Many Flavours</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Same JS file as other category pages -->
+    <script src="js/category-script.js"></script>
+</body>
+</html>
